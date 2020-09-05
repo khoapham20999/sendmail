@@ -6,9 +6,9 @@
 
 # Install requirements
 
-pip install pyqrcode  
-pip install pypng   
-pip install xlrd
+- pip install pyqrcode  
+- pip install pypng   
+- pip install xlrd
 
 # How to run
 
