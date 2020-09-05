@@ -15,7 +15,7 @@ def send(toaddr, name_image) :
     msg['Subject'] = "Welcome to the world"
     msg.attach(MIMEText(body, 'plain'))
 
-    img_data = open("/home/khoa/working/sendmail/labs/qr_images/{}".format(name_image), 'rb').read()
+    img_data = open("/home/khoa/working/sendmail/labs/images/{}".format(name_image), 'rb').read()
     html_part = MIMEMultipart(_subtype='related')
     body = MIMEText('''<p>Hello</p>
     <img src="cid:myimage" alt="Logo" style="width:200px;height:200px;"/>''', _subtype='html')
