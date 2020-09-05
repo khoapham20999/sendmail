@@ -1,1 +1,5 @@
 .venv
+.gitignore
+labs
+__pycache__
+conf.py
