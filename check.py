@@ -27,7 +27,7 @@ def check() :
         email = user[1]
         name_image = email.split("@")[0]
         # sendemail function
-        make_qr_code(qr_code, "/home/khoa/working/sendmail/qr_images/{}".format(name_image))
+        make_qr_code(qr_code, "/home/khoa/working/sendmail/images/{}".format(name_image))
         send(email, name_image)
         # print("Sent mail with user {} with qr code {}".format(name_image, qr_code))
 
