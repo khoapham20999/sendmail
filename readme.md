@@ -9,6 +9,7 @@
 - pip install pyqrcode  
 - pip install pypng   
 - pip install xlrd
+- pip install image
 
 # How to run
 
