@@ -6,19 +6,19 @@ from email.mime.image import MIMEImage
 from email import encoders
 import conf
 
-def send(toaddr, name_image) :
+def send(toaddr, name_image, full_name) :
     body = "Vé của bạn: "
     from_mail = conf.username
     msg = MIMEMultipart()
     msg['From'] = from_mail
     msg['To'] = toaddr
-    msg['Subject'] = "Welcome to the world"
+    msg['Subject'] = "Welcome to the festival"
     msg.attach(MIMEText(body, 'plain'))
 
-    img_data = open("/home/khoa/working/sendmail/labs/images/{}".format(name_image), 'rb').read()
+    img_data = open("/home/khoa/working/sendmail/images/{}.png".format(name_image), 'rb').read()
     html_part = MIMEMultipart(_subtype='related')
-    body = MIMEText('''<p>Hello</p>
-    <img src="cid:myimage" alt="Logo" style="width:200px;height:200px;"/>''', _subtype='html')
+    body = MIMEText('''<p>Hello <strong> {} </strong> </p>
+    <img src="cid:myimage" alt="Logo" style="width:200px;height:200px;"/>'''.format(full_name), _subtype='html')
     html_part.attach(body)
 
     img = MIMEImage(img_data, 'jpg')
