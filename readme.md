@@ -3,14 +3,7 @@
 - cd /path/
 - python3 -m venv --copies .venv
 - source .venv/bin/activate
-
-# Install requirements
-
-- pip install pyqrcode  
-- pip install pypng   
-- pip install xlrd
-- pip install image
-
+- pip install -r requirements.txt
 # How to run
 
 - install requirements packages  
