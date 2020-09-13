@@ -4,3 +4,5 @@ labs
 __pycache__
 conf.py
 test.py
+images
+client_secret.json

@@ -4,18 +4,18 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.image import MIMEImage
 from email import encoders
-import conf
+from conf import conf
 
-def send(toaddr, name_image, full_name) :
+def send(toaddr, name_image, full_name, qr_code) :
     body = "Vé của bạn: "
     from_mail = conf.username
     msg = MIMEMultipart()
     msg['From'] = from_mail
     msg['To'] = toaddr
-    msg['Subject'] = "Welcome to the festival"
+    msg['Subject'] = "[{} - {}] Welcome to the festival".format(qr_code, full_name)
     msg.attach(MIMEText(body, 'plain'))
 
-    img_data = open("/home/khoa/working/sendmail/images/{}.png".format(name_image), 'rb').read()
+    img_data = open("./images/{}".format(name_image), 'rb').read()
     html_part = MIMEMultipart(_subtype='related')
     body = MIMEText('''<p>Hello <strong> {} </strong> </p>
     <img src="cid:myimage" alt="Logo" style="width:200px;height:200px;"/>'''.format(full_name), _subtype='html')
