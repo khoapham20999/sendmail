@@ -42,7 +42,7 @@ def read_gsheet_to_sent_ticket(): # list user to send - pail = YES and send_tick
     lst = []
     # for i in range(1,10) : 
     n=2
-    while n < 10 : 
+    while n < 16 : 
         # user_info = sheetRegisteredUser.row_values(n)
         # RegisteredUsers_Paid = user_info[8]
         # RegisteredUsers_SentTicket = user_info[9] 

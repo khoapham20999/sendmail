@@ -12,6 +12,7 @@ def send(toaddr, name_image, full_name, qr_code) :
     msg = MIMEMultipart()
     msg['From'] = from_mail
     msg['To'] = toaddr
+    msg['CC'] = "phaolo.hung.nguyen@gmail.com"
     msg['Subject'] = "[{} - {}] Welcome to the festival".format(qr_code, full_name)
     msg.attach(MIMEText(body, 'plain'))
 
@@ -43,4 +44,9 @@ def send(toaddr, name_image, full_name, qr_code) :
 
 
 
-#
+''' 
+
+remains :  cc to email 
+
+
+''' 
